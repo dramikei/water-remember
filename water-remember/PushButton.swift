@@ -11,6 +11,9 @@ import UIKit
 @IBDesignable
 class PushButton: UIButton {
     
+    @IBInspectable var fillColor: UIColor = UIColor.green
+    @IBInspectable var isAddButton: Bool = true
+    
     private struct Constants {
         static let plusLineWidth: CGFloat = 3.0
         static let plusButtonScale: CGFloat = 0.5
@@ -27,7 +30,7 @@ class PushButton: UIButton {
 
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(ovalIn: rect)
-        UIColor.blue.setFill()
+        fillColor.setFill()
         path.fill()
         
         let plusWidth = min(bounds.width, bounds.height) * Constants.plusButtonScale
@@ -46,9 +49,11 @@ class PushButton: UIButton {
             x: halfWidth + halfPlusWidth + Constants.halfPointShift,
             y: halfHeight + Constants.halfPointShift))
         
-        plusPath.move(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight - halfPlusWidth + Constants.halfPointShift))
-        
-        plusPath.addLine(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight + halfPlusWidth + Constants.halfPointShift))
+        if isAddButton {
+            plusPath.move(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight - halfPlusWidth + Constants.halfPointShift))
+            
+            plusPath.addLine(to: CGPoint(x: halfWidth + Constants.halfPointShift, y: halfHeight + halfPlusWidth + Constants.halfPointShift))
+        }
         
         UIColor.white.setStroke()
         plusPath.stroke()

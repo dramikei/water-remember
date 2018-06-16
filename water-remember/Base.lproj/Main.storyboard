@@ -23,11 +23,32 @@
                                     <constraint firstAttribute="width" constant="100" id="Tb2-1e-daS"/>
                                     <constraint firstAttribute="height" constant="100" id="fHz-b4-i41"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.3411764705882353" green="0.85490196078431369" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ki-NI-vco" customClass="PushButton" customModule="water_remember" customModuleProvider="target">
+                                <rect key="frame" x="162.5" y="503.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tw9-LA-Cih"/>
+                                    <constraint firstAttribute="width" constant="50" id="uQm-bX-Nha"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.92941176470588238" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sZV-1D-Ajh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="Xbz-Zq-wXn"/>
+                            <constraint firstItem="6Ki-NI-vco" firstAttribute="top" secondItem="sZV-1D-Ajh" secondAttribute="bottom" constant="20" id="gxs-Cn-BNP"/>
+                            <constraint firstItem="6Ki-NI-vco" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p3d-nE-eon"/>
                             <constraint firstItem="sZV-1D-Ajh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ubb-37-Ws4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
